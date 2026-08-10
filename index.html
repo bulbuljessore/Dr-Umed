@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior:smooth; scroll-padding-top:142px; }
+  html, body { margin:0; padding:0; background:#EFEAE0; -webkit-font-smoothing:antialiased; }
+  * { box-sizing:border-box; }
+  a { color:inherit; text-decoration:none; }
+  ::selection { background:#E4DCCB; }
+  .ph { background-color:#E4DCCB; background-image:repeating-linear-gradient(135deg, rgba(27,26,23,0.055) 0 1px, transparent 1px 9px); display:flex; align-items:flex-end; }
+  @media (prefers-reduced-motion: reduce) { * { transition-duration:1ms !important; } }
+</style>
+</helmet>
+
+<div style="background:#EFEAE0; color:#1B1A17; font-family:Archivo, Helvetica, sans-serif; overflow-x:clip;">
+
+  <sc-if value="{{ showTopBar }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#1B1A17; color:#C9C1B0; font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">
+      <div style="max-width:1320px; margin:0 auto; padding:11px 40px; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <span>Hope Island · Bundall · Paddington · Maroochydore · Ipswich</span>
+        <span style="display:flex; gap:26px;"><span>Mon–Fri 9–5 · Sat 10–3</span><a href="tel:0407194519" style="color:#EFEAE0; border-bottom:1px solid rgba(239,234,224,0.4);">0407 194 519</a></span>
+      </div>
+    </div>
+  </sc-if>
+
+  <header style="position:sticky; top:0; z-index:20; background:rgba(239,234,224,0.92); backdrop-filter:blur(10px); border-bottom:1px solid #C9C1B0;">
+    <div style="max-width:1320px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:clamp(18px,2.5vw,32px);">
+      <a href="#top" style="display:block; flex-shrink:0;">
+        <img src="logo.svg" alt="Dr Umed Cosmetics" style="height:44px; width:auto; display:block;" />
+      </a>
+      <nav style="display:flex; align-items:center; gap:clamp(16px,2.1vw,34px); font-size:14.5px; font-weight:500; white-space:nowrap;">
+        <a href="#concerns" style="padding-bottom:2px; border-bottom:1px solid transparent; transition:color .25s ease, border-color .25s ease;" style-hover="border-bottom-color:#8E5A22; color:#8E5A22;">Concerns</a>
+        <a href="#consultation" style="padding-bottom:2px; border-bottom:1px solid transparent; transition:color .25s ease, border-color .25s ease;" style-hover="border-bottom-color:#8E5A22; color:#8E5A22;">Consultation</a>
+        <a href="#skin" style="padding-bottom:2px; border-bottom:1px solid transparent; transition:color .25s ease, border-color .25s ease;" style-hover="border-bottom-color:#8E5A22; color:#8E5A22;">Skin checks</a>
+        <a href="#team" style="padding-bottom:2px; border-bottom:1px solid transparent; transition:color .25s ease, border-color .25s ease;" style-hover="border-bottom-color:#8E5A22; color:#8E5A22;">Practitioners</a>
+        <a href="#clinics" style="padding-bottom:2px; border-bottom:1px solid transparent; transition:color .25s ease, border-color .25s ease;" style-hover="border-bottom-color:#8E5A22; color:#8E5A22;">Clinics</a>
+        <a href="#book" style="background-color:#1B1A17; background-image:linear-gradient(#8E5A22,#8E5A22); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; color:#EFEAE0; padding:13px 22px; font-size:14px; font-weight:600; white-space:nowrap; flex-shrink:0; transition:background-size .4s cubic-bezier(.2,.7,.2,1);" style-hover="background-size:100% 100%;" onClick="{{ openModal }}">Book a consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" style="max-width:1320px; margin:0 auto; padding:76px 40px 0;">
+    <div style="display:grid; grid-template-columns:minmax(0,1.32fr) minmax(0,1fr); gap:64px; align-items:end;">
+      <div>
+        <div data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(14px); transition:opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22; margin-bottom:26px;">Doctor-led · Established clinics across South East Queensland</div>
+        <h1 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(32px,4.6vw,70px); line-height:1.06; letter-spacing:-0.018em; margin:0;">
+          <span style="display:block; overflow:hidden;"><span data-reveal="up" data-reveal-delay="60" style="display:block; opacity:0; transform:translateY(105%); white-space:nowrap; transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">Medical skin care,</span></span>
+          <span style="display:block; overflow:hidden;"><span data-reveal="up" data-reveal-delay="130" style="display:block; opacity:0; transform:translateY(105%); white-space:nowrap; transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">with the assessment</span></span>
+          <span style="display:block; overflow:hidden;"><span data-reveal="up" data-reveal-delay="200" style="display:block; opacity:0; transform:translateY(105%); white-space:nowrap; transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">before the appointment.</span></span>
+        </h1>
+        <p data-reveal="up" data-reveal-delay="300" style="opacity:0; transform:translateY(16px); transition:opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); font-size:20px; line-height:1.6; max-width:54ch; margin:30px 0 0; color:#3A362E; text-wrap:pretty;">Every visit here starts with a consultation, because what is appropriate for your skin can only be decided once someone has examined it. Some people leave with a treatment plan. Some leave with a referral, or with nothing at all.</p>
+        <div data-reveal="up" data-reveal-delay="380" style="opacity:0; transform:translateY(16px); transition:opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); display:flex; gap:14px; flex-wrap:wrap; margin-top:36px;">
+          <a href="#book" style="background-color:#1B1A17; background-image:linear-gradient(#8E5A22,#8E5A22); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; color:#EFEAE0; padding:18px 32px; font-size:16px; font-weight:600; transition:background-size .45s cubic-bezier(.2,.7,.2,1);" style-hover="background-size:100% 100%;" onClick="{{ openModal }}">Request a consultation</a>
+          <a href="#clinics" style="border:1px solid #1B1A17; background-image:linear-gradient(#E4DCCB,#E4DCCB); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; padding:18px 32px; font-size:16px; font-weight:600; transition:background-size .45s cubic-bezier(.2,.7,.2,1);" style-hover="background-size:100% 100%;">Find your nearest clinic</a>
+        </div>
+      </div>
+      <div data-reveal="clip" data-reveal-delay="140" style="aspect-ratio:4/5; overflow:hidden; background:#E4DCCB; clip-path:inset(0 0 100% 0); transition:clip-path .95s cubic-bezier(.16,.84,.24,1);">
+        <img src="img/treatment-room.png" alt="Treatment room at the clinic" data-parallax="0.05" style="width:100%; height:calc(100% + 80px); margin-top:-40px; object-fit:cover; object-position:center; display:block; transition:transform 1.4s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);" />
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:0; margin-top:64px; border-top:1px solid #1B1A17;">
+      <div data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); padding:22px 26px 22px 0; box-shadow:1px 0 0 #C9C1B0;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559;">Led by</div>
+        <div style="font-size:16px; font-weight:600; margin-top:8px;">Dr Umed Shekhawat</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; color:#4A463D; margin-top:5px;">MED0001819144</div>
+      </div>
+      <div data-reveal="up" data-reveal-delay="60" style="opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); padding:22px 26px; box-shadow:1px 0 0 #C9C1B0;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559;">Qualifications</div>
+        <div style="font-size:16px; font-weight:600; margin-top:8px;">MBBS, FRACGP</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; color:#4A463D; margin-top:5px;">Dip. Skin Cancer Medicine</div>
+      </div>
+      <div data-reveal="up" data-reveal-delay="180" style="opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); padding:22px 26px; box-shadow:1px 0 0 #C9C1B0;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559;">In practice</div>
+        <div style="font-size:16px; font-weight:600; margin-top:8px;">20+ years</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; color:#4A463D; margin-top:5px;">General practice &amp; skin</div>
+      </div>
+      <div data-reveal="up" data-reveal-delay="270" style="opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); padding:22px 0 22px 26px;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559;">Clinical team</div>
+        <div style="font-size:16px; font-weight:600; margin-top:8px;">Six practitioners</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; color:#4A463D; margin-top:5px;">Registrations published</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="concerns" style="max-width:1320px; margin:0 auto; padding:120px 40px 0;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap; padding-bottom:28px; border-bottom:3px solid #1B1A17;">
+      <div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22;">Where to start</div>
+        <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.06; margin:14px 0 0; max-width:22ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="0" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">Begin with what you have noticed</span></h2>
+      </div>
+      <p style="font-size:16px; line-height:1.65; max-width:38ch; margin:0; color:#3A362E;">Not with a product name. Each of these opens onto an assessment, what it involves, what it costs, and what the risks and recovery look like.</p>
+    </div>
+
+    <a href="#book" onClick="{{ openWith.c1 }}" data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(20px); display:grid; grid-template-columns:76px minmax(0,1fr) minmax(0,1.05fr) 40px; gap:28px; align-items:start; padding:34px 0; border-bottom:1px solid #C9C1B0; transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease;" style-hover="background-color:#E9E2D4;">
+      <span style="font-family:'Space Mono', monospace; font-size:12px; color:#8E5A22; padding-top:6px;">01</span>
+      <span style="font-family:'Instrument Serif', Georgia, serif; font-size:clamp(26px,2.9vw,38px); line-height:1.1;">Lines that appear when your face moves</span>
+      <span style="font-size:16px; line-height:1.65; color:#3A362E;">A consultation about facial muscle movement. We examine which muscles are involved, explain what is and is not treatable, and tell you what maintaining any result would mean over a year. Treatment involves a prescription medicine and is only considered after assessment.</span>
+      <span style="font-family:'Space Mono', monospace; font-size:18px; color:#8E5A22; text-align:right; padding-top:4px;">→</span>
+    </a>
+    <a href="#book" onClick="{{ openWith.c2 }}" data-reveal="up" data-reveal-delay="70" style="opacity:0; transform:translateY(20px); display:grid; grid-template-columns:76px minmax(0,1fr) minmax(0,1.05fr) 40px; gap:28px; align-items:start; padding:34px 0; border-bottom:1px solid #C9C1B0; transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease;" style-hover="background-color:#E9E2D4;">
+      <span style="font-family:'Space Mono', monospace; font-size:12px; color:#8E5A22; padding-top:6px;">02</span>
+      <span style="font-family:'Instrument Serif', Georgia, serif; font-size:clamp(26px,2.9vw,38px); line-height:1.1;">Change in facial volume or contour</span>
+      <span style="font-size:16px; line-height:1.65; color:#3A362E;">An assessment of facial structure over time. Some concerns are better addressed without an injectable, and we will tell you when that is the case. Where a prescription medicine is involved, a practitioner consultation is required before anything is planned.</span>
+      <span style="font-family:'Space Mono', monospace; font-size:18px; color:#8E5A22; text-align:right; padding-top:4px;">→</span>
+    </a>
+    <a href="#book" onClick="{{ openWith.c3 }}" data-reveal="up" data-reveal-delay="140" style="opacity:0; transform:translateY(20px); display:grid; grid-template-columns:76px minmax(0,1fr) minmax(0,1.05fr) 40px; gap:28px; align-items:start; padding:34px 0; border-bottom:1px solid #C9C1B0; transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease;" style-hover="background-color:#E9E2D4;">
+      <span style="font-family:'Space Mono', monospace; font-size:12px; color:#8E5A22; padding-top:6px;">03</span>
+      <span style="font-family:'Instrument Serif', Georgia, serif; font-size:clamp(26px,2.9vw,38px); line-height:1.1;">Pigmentation, texture and scarring</span>
+      <span style="font-size:16px; line-height:1.65; color:#3A362E;">Dermal therapy and laser, planned as a course rather than sold as a session. Your therapist will tell you how many appointments the plan assumes, how the skin behaves in between, and when it is reasonable to stop.</span>
+      <span style="font-family:'Space Mono', monospace; font-size:18px; color:#8E5A22; text-align:right; padding-top:4px;">→</span>
+    </a>
+    <a href="#book" onClick="{{ openWith.c4 }}" data-reveal="up" data-reveal-delay="210" style="opacity:0; transform:translateY(20px); display:grid; grid-template-columns:76px minmax(0,1fr) minmax(0,1.05fr) 40px; gap:28px; align-items:start; padding:34px 0; border-bottom:1px solid #C9C1B0; transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease;" style-hover="background-color:#E9E2D4;">
+      <span style="font-family:'Space Mono', monospace; font-size:12px; color:#8E5A22; padding-top:6px;">04</span>
+      <span style="font-family:'Instrument Serif', Georgia, serif; font-size:clamp(26px,2.9vw,38px); line-height:1.1;">Skin laxity and facial support</span>
+      <span style="font-size:16px; line-height:1.65; color:#3A362E;">Includes procedures with real recovery. Swelling, tenderness and visible bruising are common in the first week, and outcomes vary between individuals. Read the risk and recovery information before booking this category.</span>
+      <span style="font-family:'Space Mono', monospace; font-size:18px; color:#8E5A22; text-align:right; padding-top:4px;">→</span>
+    </a>
+    <a href="#book" onClick="{{ openWith.c5 }}" data-reveal="up" data-reveal-delay="280" style="opacity:0; transform:translateY(20px); display:grid; grid-template-columns:76px minmax(0,1fr) minmax(0,1.05fr) 40px; gap:28px; align-items:start; padding:34px 0; border-bottom:1px solid #1B1A17; transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1), background-color .3s ease;" style-hover="background-color:#E9E2D4;">
+      <span style="font-family:'Space Mono', monospace; font-size:12px; color:#8E5A22; padding-top:6px;">05</span>
+      <span style="font-family:'Instrument Serif', Georgia, serif; font-size:clamp(26px,2.9vw,38px); line-height:1.1;">A spot or mole you want looked at</span>
+      <span style="font-size:16px; line-height:1.65; color:#3A362E;">A medical skin examination with dermoscopy, unrelated to any cosmetic treatment. If you are unsure which appointment you need, this is the one to book first.</span>
+      <span style="font-family:'Space Mono', monospace; font-size:18px; color:#8E5A22; text-align:right; padding-top:4px;">→</span>
+    </a>
+  </section>
+
+  <section id="consultation" style="background:#1B1A17; color:#EFEAE0; margin-top:120px;">
+    <div style="max-width:1320px; margin:0 auto; padding:96px 40px 104px;">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:64px; align-items:start;">
+        <div>
+          <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#C3A97E;">The consultation</div>
+          <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.06; margin:14px 0 0; max-width:20ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="0" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">What actually happens when you come in</span></h2>
+          <p style="font-size:17px; line-height:1.7; color:#C9C1B0; max-width:44ch; margin:26px 0 0;">Consultations are booked as assessments, not as treatments. Nothing is administered on a first visit without one, and we will decline to treat where it is not clinically appropriate.</p>
+          <a href="#book" style="display:inline-block; margin-top:34px; background-color:#EFEAE0; background-image:linear-gradient(#C3A97E,#C3A97E); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; color:#1B1A17; padding:17px 30px; font-size:16px; font-weight:600; transition:background-size .45s cubic-bezier(.2,.7,.2,1);" style-hover="background-size:100% 100%;" onClick="{{ openModal }}">Request a consultation</a>
+        </div>
+        <div>
+          <div data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); display:grid; grid-template-columns:64px 1fr; gap:26px; padding:26px 0; border-top:1px solid #3A362E;">
+            <span style="font-family:'Space Mono', monospace; font-size:12px; color:#C3A97E;">01</span>
+            <div><div style="font-size:19px; font-weight:600;">History and examination</div><p style="margin:8px 0 0; font-size:15.5px; line-height:1.65; color:#B7B0A1;">Medical history, medications, previous procedures, and an examination of the area you have asked about. Around 30 to 45 minutes.</p></div>
+          </div>
+          <div data-reveal="up" data-reveal-delay="110" style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); display:grid; grid-template-columns:64px 1fr; gap:26px; padding:26px 0; border-top:1px solid #3A362E;">
+            <span style="font-family:'Space Mono', monospace; font-size:12px; color:#C3A97E;">02</span>
+            <div><div style="font-size:19px; font-weight:600;">Options, risks and cost</div><p style="margin:8px 0 0; font-size:15.5px; line-height:1.65; color:#B7B0A1;">What is suitable, what it involves, what the risks and downtime are, and what it costs in full. Including the option of doing nothing.</p></div>
+          </div>
+          <div data-reveal="up" data-reveal-delay="220" style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); display:grid; grid-template-columns:64px 1fr; gap:26px; padding:26px 0; border-top:1px solid #3A362E;">
+            <span style="font-family:'Space Mono', monospace; font-size:12px; color:#C3A97E;">03</span>
+            <div><div style="font-size:19px; font-weight:600;">Time to decide, then consent</div><p style="margin:8px 0 0; font-size:15.5px; line-height:1.65; color:#B7B0A1;">You leave with written information and no pressure to book. Any procedure is consented separately, on a later appointment.</p></div>
+          </div>
+          <div data-reveal="up" data-reveal-delay="330" style="opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); display:grid; grid-template-columns:64px 1fr; gap:26px; padding:26px 0; border-top:1px solid #3A362E; border-bottom:1px solid #3A362E;">
+            <span style="font-family:'Space Mono', monospace; font-size:12px; color:#C3A97E;">04</span>
+            <div><div style="font-size:19px; font-weight:600;">Review and aftercare</div><p style="margin:8px 0 0; font-size:15.5px; line-height:1.65; color:#B7B0A1;">A scheduled review, written aftercare, and a number to call if something concerns you. You can also raise a concern directly with AHPRA at any time.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showSkinSection }}" hint-placeholder-val="{{ true }}">
+    <section id="skin" style="max-width:1320px; margin:0 auto; padding:110px 40px 0;">
+      <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; align-items:center;">
+        <div data-reveal="clip" data-reveal-delay="0" style="aspect-ratio:5/4; overflow:hidden; background:#E4DCCB; clip-path:inset(0 100% 0 0); transition:clip-path .95s cubic-bezier(.16,.84,.24,1);">
+          <img src="img/skin-check.png" alt="Skin examination with a dermatoscope" loading="lazy" data-parallax="0.045" style="width:100%; height:calc(100% + 80px); margin-top:-40px; object-fit:cover; object-position:center; display:block; transition:transform 1.4s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.05);" />
+        </div>
+        <div>
+          <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22;">Skin cancer medicine</div>
+          <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(32px,4.1vw,54px); line-height:1.07; margin:14px 0 0; max-width:20ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="120" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">The same doctor who checks your skin runs the clinic</span></h2>
+          <p data-reveal="up" data-reveal-delay="260" style="opacity:0; transform:translateY(16px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); font-size:17px; line-height:1.7; color:#3A362E; max-width:48ch; margin:24px 0 0;">Dr Umed holds a Diploma in Skin Cancer Medicine and a Diploma in Dermoscopy, alongside more than twenty years in general practice. Skin examinations, dermoscopy and lesion management are part of the practice, not an add-on to it.</p>
+          <p data-reveal="up" data-reveal-delay="340" style="opacity:0; transform:translateY(16px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); font-size:17px; line-height:1.7; color:#3A362E; max-width:48ch; margin:16px 0 0;">If you live in Queensland and have not had a skin check in the last twelve months, book that before anything cosmetic.</p>
+          <a href="#book" style="display:inline-block; margin-top:28px; padding-bottom:3px; font-size:16px; font-weight:600; border-bottom:1px solid #8E5A22; color:#8E5A22; transition:color .3s ease, border-color .3s ease, letter-spacing .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A; letter-spacing:0.01em;" onClick="{{ openWith.c5 }}">Book a skin examination →</a>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section id="team" style="max-width:1320px; margin:0 auto; padding:110px 40px 0;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap; padding-bottom:28px; border-bottom:3px solid #1B1A17;">
+      <div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22;">Practitioners</div>
+        <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.06; margin:14px 0 0; max-width:24ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="0" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">Who you will actually see</span></h2>
+      </div>
+      <p style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559; max-width:44ch; margin:0;">Every practitioner performing a procedure is listed with their profession, registration number and status. You can verify any of them on the public register.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:44px 32px; padding-top:44px;">
+      <div data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/dr-umed.jpg" alt="Dr Umed Shekhawat" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Dr Umed Shekhawat</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">MED0001819144<br />Registered medical practitioner<br />General registration</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">MBBS, FRACGP, Diploma in Skin Cancer Medicine, Diploma in Dermoscopy. More than twenty years in medical practice, across general practice, skin cancer care and non-surgical aesthetics.</p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="80" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/kirby.jpg" alt="Kirby Mary Petterson" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Kirby Mary Petterson</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">NMW0002010508<br />Registered nurse<br />General registration</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">Eight years in aesthetic medicine on the Gold Coast. Focuses on patient safety and education, helping patients make informed decisions about their treatment goals.</p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="160" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/vish.jpg" alt="Vish" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Vish</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">NMW0002483389<br />Registered nurse<br />General registration</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">A background in emergency and theatre nursing, combining knowledge of facial anatomy with a focus on facial rejuvenation and skin treatments. Committed to patient education and safety.</p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="0" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/angie.jpg" alt="Angie" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Angie</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">NMW0002431278<br />Registered nurse<br />General registration</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">More than five years of nursing experience, working across cosmetic consultations and volume-based treatments. Centres her practice on patient safety and clear communication.</p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="80" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/mindi.jpg" alt="Mindi" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 14%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Mindi</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">Dip. Dermal Therapy, Gold Coast 2015<br />Senior dermal &amp; laser therapist<br />Not an AHPRA-registered profession</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">Nine years in the industry, with experience across established clinics around Australia. Plans skin and laser programmes and reviews them appointment by appointment.</p>
+      </div>
+      <div data-reveal="up" data-reveal-delay="160" style="opacity:0; transform:translateY(22px); transition:opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1);">
+        <div style="aspect-ratio:3/4; overflow:hidden; background:#E4DCCB;"><img src="team/kristin.png" alt="Kristin Christensen" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block; transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.035);" /></div>
+        <div style="font-size:18px; font-weight:600; margin-top:16px;">Kristin Christensen</div>
+        <div style="font-family:'Space Mono', monospace; font-size:11px; line-height:1.75; color:#4A463D; margin-top:6px;">Advanced skin therapy<br />Skin therapist<br />Not an AHPRA-registered profession</div>
+        <p style="font-size:14.5px; line-height:1.6; color:#3A362E; margin:12px 0 0;">Five years of hands-on experience in advanced skin therapy, building treatment plans around skin health and reviewing them between medical appointments.</p>
+      </div>
+    </div>
+    <p style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559; margin:22px 0 0;">Photographs and registration details supplied by the clinic. Mindi and Kristin practise in professions that are not AHPRA-registered, so no registration number applies.</p>
+  </section>
+
+  <section id="clinics" style="max-width:1320px; margin:0 auto; padding:110px 40px 0;">
+    <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22;">Clinics</div>
+    <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(34px,4.4vw,58px); line-height:1.06; margin:14px 0 36px; max-width:22ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="0" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">Five rooms across South East Queensland</span></h2>
+
+    <div style="border-top:2px solid #1B1A17;">
+      <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr 150px; gap:24px; padding:26px 0; border-bottom:1px solid #C9C1B0; align-items:baseline;">
+        <span style="font-family:'Instrument Serif', Georgia, serif; font-size:27px;">Hope Island</span>
+        <span style="font-size:15px; color:#3A362E;">341 Hope Island Road, Hope Island QLD 4212</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; color:#4A463D;">Mon–Fri 9–5 · Sat 10–3</span>
+        <a href="#book" style="font-size:14px; font-weight:600; color:#8E5A22; border-bottom:1px solid #8E5A22; justify-self:start; transition:color .3s ease, border-color .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A;" onClick="{{ openModal }}">Book here →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr 150px; gap:24px; padding:26px 0; border-bottom:1px solid #C9C1B0; align-items:baseline;">
+        <span style="font-family:'Instrument Serif', Georgia, serif; font-size:27px;">Bundall</span>
+        <span style="font-size:15px; color:#3A362E;">107 Upton Street, Bundall QLD 4217</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; color:#4A463D;">Hours to confirm</span>
+        <a href="#book" style="font-size:14px; font-weight:600; color:#8E5A22; border-bottom:1px solid #8E5A22; justify-self:start; transition:color .3s ease, border-color .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A;" onClick="{{ openModal }}">Book here →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr 150px; gap:24px; padding:26px 0; border-bottom:1px solid #C9C1B0; align-items:baseline;">
+        <span style="font-family:'Instrument Serif', Georgia, serif; font-size:27px;">Paddington</span>
+        <span style="font-size:15px; color:#3A362E;">131 Latrobe Terrace, Paddington QLD 4064</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; color:#4A463D;">Hours to confirm</span>
+        <a href="#book" style="font-size:14px; font-weight:600; color:#8E5A22; border-bottom:1px solid #8E5A22; justify-self:start; transition:color .3s ease, border-color .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A;" onClick="{{ openModal }}">Book here →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr 150px; gap:24px; padding:26px 0; border-bottom:1px solid #C9C1B0; align-items:baseline;">
+        <span style="font-family:'Instrument Serif', Georgia, serif; font-size:27px;">Maroochydore</span>
+        <span style="font-size:15px; color:#3A362E;">2/32 Aerodrome Road, Maroochydore QLD 4558</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; color:#4A463D;">Hours to confirm</span>
+        <a href="#book" style="font-size:14px; font-weight:600; color:#8E5A22; border-bottom:1px solid #8E5A22; justify-self:start; transition:color .3s ease, border-color .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A;" onClick="{{ openModal }}">Book here →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1.5fr 1fr 150px; gap:24px; padding:26px 0; border-bottom:2px solid #1B1A17; align-items:baseline;">
+        <span style="font-family:'Instrument Serif', Georgia, serif; font-size:27px;">Ipswich</span>
+        <span style="font-size:15px; color:#3A362E;">87 Brisbane Street, Ipswich QLD 4305</span>
+        <span style="font-family:'Space Mono', monospace; font-size:12px; color:#4A463D;">Hours to confirm</span>
+        <a href="#book" style="font-size:14px; font-weight:600; color:#8E5A22; border-bottom:1px solid #8E5A22; justify-self:start; transition:color .3s ease, border-color .3s ease;" style-hover="color:#12726A; border-bottom-color:#12726A;" onClick="{{ openModal }}">Book here →</a>
+      </div>
+    </div>
+    <p style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559; margin:16px 0 0;">Addresses compiled from the current site and public listings. Confirm trading status and hours before publishing.</p>
+  </section>
+
+  <section style="max-width:1320px; margin:0 auto; padding:110px 40px 0;">
+    <div style="background:#E4DCCB; padding:52px 48px;">
+      <div style="display:grid; grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr); gap:56px; align-items:start;">
+        <div style="display:flex; flex-direction:column; height:100%;">
+          <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8E5A22;">Risk, recovery and honesty</div>
+          <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(30px,3.6vw,46px); line-height:1.08; margin:14px 0 0; max-width:18ch;">Things a clinic should tell you before you book</h2>
+          <p style="font-size:16px; line-height:1.7; color:#3A362E; max-width:34ch; margin:20px 0 0;">Australian guidelines require this information to be easy to find rather than requested. Five points sit here on the homepage; each procedure page carries the full version.</p>
+          <div style="margin-top:26px; padding-top:22px; border-top:1px solid #C9C1B0; display:flex; flex-direction:column; gap:10px;">
+            <div style="display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span style="color:#3A362E;">Typical consultation</span><span style="font-family:'Space Mono', monospace; font-size:13px;">30–45 min</span></div>
+            <div style="display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span style="color:#3A362E;">Treatment on a first visit</span><span style="font-family:'Space Mono', monospace; font-size:13px;">No</span></div>
+            <div style="display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span style="color:#3A362E;">Review appointment</span><span style="font-family:'Space Mono', monospace; font-size:13px;">Included</span></div>
+            <div style="display:flex; justify-content:space-between; gap:16px; font-size:15px;"><span style="color:#3A362E;">Right to decline</span><span style="font-family:'Space Mono', monospace; font-size:13px;">Both ways</span></div>
+          </div>
+          <a href="#book" onClick="{{ openModal }}" style="margin-top:auto; padding-top:26px; font-size:16px; font-weight:600; color:#8E5A22; transition:color .3s ease;" style-hover="color:#12726A;">Ask us anything before you book →</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:22px;">
+          <p style="margin:0; font-size:16.5px; line-height:1.7; color:#3A362E;"><strong>Outcomes vary between individuals.</strong> What one person experiences after a procedure does not predict what you will experience. Anyone who promises you a specific result is guessing.</p>
+          <p style="margin:0; font-size:16.5px; line-height:1.7; color:#3A362E;"><strong>Every procedure carries risk.</strong> Bruising, swelling and tenderness are common. Less common complications exist and are described in full on each procedure's page, along with what to do if one occurs.</p>
+          <p style="margin:0; font-size:16.5px; line-height:1.7; color:#3A362E;"><strong>Most effects are temporary.</strong> Maintaining a result means repeat appointments and ongoing cost. We will tell you the likely frequency before you start, not after.</p>
+          <p style="margin:0; font-size:16.5px; line-height:1.7; color:#3A362E;"><strong>Some medicines cannot be advertised.</strong> Australian law restricts what a clinic may publish about prescription-only treatments. That is why this site describes consultations rather than products. Details are discussed in person, with a practitioner.</p>
+          <p style="margin:0; font-size:16.5px; line-height:1.7; color:#3A362E;"><strong>You can complain.</strong> If you are unhappy with your care, tell us first, and know that you may also raise a concern with AHPRA regardless of any agreement you have signed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" style="max-width:1320px; margin:0 auto; padding:110px 40px 0;">
+    <div style="position:relative; overflow:hidden; background-color:#141311; color:#EFEAE0; padding:64px 48px 68px;">
+      <img src="img/reception.png" alt="Clinic reception" loading="lazy" data-parallax="0.055" style="position:absolute; left:0; top:-40px; width:100%; height:calc(100% + 80px); object-fit:cover; object-position:center 62%; display:block;" />
+      <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(15,14,13,0.94) 0%, rgba(15,14,13,0.86) 45%, rgba(15,14,13,0.62) 100%); pointer-events:none;"></div>
+      <div style="position:relative; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.9fr); gap:64px; align-items:end;">
+        <div>
+          <h2 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:clamp(36px,4.8vw,64px); line-height:1.04; margin:0; max-width:18ch; overflow:hidden;"><span data-reveal="up" data-reveal-delay="0" style="display:block; opacity:0; transform:translateY(105%); transition:opacity .7s cubic-bezier(.16,.84,.24,1), transform .7s cubic-bezier(.16,.84,.24,1);">Request a consultation</span></h2>
+          <p style="font-size:17.5px; line-height:1.7; color:#C9C1B0; max-width:46ch; margin:22px 0 0;">Choose a clinic and a time, tell us what you would like to discuss, and we will confirm by phone. If we think another appointment suits you better, we will say so before you come in.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#book" style="background-color:#EFEAE0; background-image:linear-gradient(#C3A97E,#C3A97E); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; color:#1B1A17; padding:19px 34px; font-size:16px; font-weight:600; transition:background-size .45s cubic-bezier(.2,.7,.2,1);" style-hover="background-size:100% 100%;" onClick="{{ openModal }}">Request online</a>
+            <a href="tel:0407194519" style="border:1px solid #6B6559; background-image:linear-gradient(#2A2823,#2A2823); background-repeat:no-repeat; background-position:left bottom; background-size:0% 100%; color:#EFEAE0; padding:19px 34px; font-size:16px; font-weight:600; transition:background-size .45s cubic-bezier(.2,.7,.2,1), border-color .3s ease;" style-hover="background-size:100% 100%; border-color:#EFEAE0;">Call 0407 194 519</a>
+          </div>
+          <div style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; color:#8B8474; margin-top:10px;">Consultation fee stated at booking. No treatment on a first visit without assessment, and we may decline where treatment is not appropriate.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1320px; margin:96px auto 0; padding:0 40px 72px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:40px; padding-top:34px; border-top:3px solid #1B1A17;">
+      <div>
+        <img src="logo.svg" alt="Dr Umed Cosmetics" style="height:52px; width:auto; display:block;" />
+        <div style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559; margin-top:14px;">Cosmetic and skin medicine, South East Queensland. <a href="tel:0407194519" style="color:#3A362E; border-bottom:1px solid #C9C1B0;">0407 194 519</a></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; font-size:14.5px;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559; margin-bottom:5px;">Care</div>
+        <a href="#concerns" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Concerns</a>
+        <a href="#consultation" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Consultation</a>
+        <a href="#skin" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Skin checks</a>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Risks &amp; recovery</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; font-size:14.5px;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559; margin-bottom:5px;">Practice</div>
+        <a href="#team" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Practitioners</a>
+        <a href="#clinics" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Clinics</a>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Fees</a>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Contact</a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; font-size:14.5px;">
+        <div style="font-family:'Space Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559; margin-bottom:5px;">Legal</div>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Privacy</a>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Complaints process</a>
+        <a href="#book" style="color:#3A362E; transition:color .25s ease;" style-hover="color:#8E5A22;">Terms</a>
+      </div>
+    </div>
+    <div style="margin-top:44px; padding-top:20px; border-top:1px solid #C9C1B0; display:flex; justify-content:space-between; gap:20px 40px; flex-wrap:wrap; font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559;">
+      <span>© 2026 Dr Umed Cosmetics. All rights reserved.</span>
+      <span>Dr Umed Shekhawat · MED0001819144</span>
+    </div>
+  </footer>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed; inset:0; z-index:60; background:rgba(27,26,23,0.55); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; padding:24px;">
+      <div onClick="{{ stop }}" style="background:#EFEAE0; width:100%; max-width:660px; max-height:88vh; overflow-y:auto; box-shadow:0 30px 90px rgba(27,26,23,0.4);">
+
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 30px; border-bottom:1px solid #C9C1B0;">
+          <img src="logo.svg" alt="Dr Umed Cosmetics" style="height:34px; width:auto; display:block;" />
+          <button onClick="{{ closeModal }}" style="background:none; border:1px solid #C9C1B0; color:#1B1A17; width:38px; height:38px; font-size:17px; cursor:pointer; font-family:'Space Mono', monospace; transition:background-color .25s ease, border-color .25s ease;" style-hover="background-color:#E4DCCB; border-color:#1B1A17;">×</button>
+        </div>
+
+        <sc-if value="{{ notDone }}" hint-placeholder-val="{{ false }}">
+          <div>
+            <div style="padding:22px 30px 0; display:flex; justify-content:space-between; align-items:baseline; gap:16px; font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559;">
+              <span>{{ stepLabel }}</span>
+              <span>Assessment request</span>
+            </div>
+            <div style="margin:14px 30px 0; height:2px; background:#D8D0BE;">
+              <div style="height:2px; background:#8E5A22; transition:width .45s cubic-bezier(.2,.7,.2,1); width:{{ progress }};"></div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:28px 30px 8px;">
+            <h3 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:34px; line-height:1.1; margin:0 0 6px;">What would you like to discuss?</h3>
+            <p style="margin:0 0 22px; font-size:15px; line-height:1.6; color:#3A362E;">Pick the closest description. Nothing here books a treatment; it books an assessment with a practitioner.</p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <button onClick="{{ pickC.c1 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c1.bg }}; color:{{ c.c1.fg }}; border:1px solid {{ c.c1.bd }};">Lines that appear when my face moves</button>
+              <button onClick="{{ pickC.c2 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c2.bg }}; color:{{ c.c2.fg }}; border:1px solid {{ c.c2.bd }};">Change in facial volume or contour</button>
+              <button onClick="{{ pickC.c3 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c3.bg }}; color:{{ c.c3.fg }}; border:1px solid {{ c.c3.bd }};">Pigmentation, texture or scarring</button>
+              <button onClick="{{ pickC.c4 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c4.bg }}; color:{{ c.c4.fg }}; border:1px solid {{ c.c4.bd }};">Skin laxity and facial support</button>
+              <button onClick="{{ pickC.c5 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c5.bg }}; color:{{ c.c5.fg }}; border:1px solid {{ c.c5.bd }};">A spot or mole I want looked at</button>
+              <button onClick="{{ pickC.c6 }}" style="text-align:left; padding:16px 18px; font-family:Archivo, sans-serif; font-size:15.5px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ c.c6.bg }}; color:{{ c.c6.fg }}; border:1px solid {{ c.c6.bd }};">I am not sure yet</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:28px 30px 8px;">
+            <h3 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:34px; line-height:1.1; margin:0 0 6px;">Where and when suits you?</h3>
+            <p style="margin:0 0 22px; font-size:15px; line-height:1.6; color:#3A362E;">We will confirm an exact time by phone. Consultations run 30 to 45 minutes.</p>
+            <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559; margin-bottom:10px;">Clinic</div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:26px;">
+              <button onClick="{{ pickCl.hope }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ cl.hope.bg }}; color:{{ cl.hope.fg }}; border:1px solid {{ cl.hope.bd }};">Hope Island</button>
+              <button onClick="{{ pickCl.bundall }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ cl.bundall.bg }}; color:{{ cl.bundall.fg }}; border:1px solid {{ cl.bundall.bd }};">Bundall</button>
+              <button onClick="{{ pickCl.paddington }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ cl.paddington.bg }}; color:{{ cl.paddington.fg }}; border:1px solid {{ cl.paddington.bd }};">Paddington</button>
+              <button onClick="{{ pickCl.maroochydore }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ cl.maroochydore.bg }}; color:{{ cl.maroochydore.fg }}; border:1px solid {{ cl.maroochydore.bd }};">Maroochydore</button>
+              <button onClick="{{ pickCl.ipswich }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ cl.ipswich.bg }}; color:{{ cl.ipswich.fg }}; border:1px solid {{ cl.ipswich.bd }};">Ipswich</button>
+            </div>
+            <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B6559; margin-bottom:10px;">Preferred time</div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+              <button onClick="{{ pickT.wm }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ t.wm.bg }}; color:{{ t.wm.fg }}; border:1px solid {{ t.wm.bd }};">Weekday morning</button>
+              <button onClick="{{ pickT.wa }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ t.wa.bg }}; color:{{ t.wa.fg }}; border:1px solid {{ t.wa.bd }};">Weekday afternoon</button>
+              <button onClick="{{ pickT.sat }}" style="padding:13px 18px; font-family:Archivo, sans-serif; font-size:15px; cursor:pointer; transition:background-color .2s ease, color .2s ease; background:{{ t.sat.bg }}; color:{{ t.sat.fg }}; border:1px solid {{ t.sat.bd }};">Saturday</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:28px 30px 8px;">
+            <h3 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:34px; line-height:1.1; margin:0 0 6px;">How should we reach you?</h3>
+            <p style="margin:0 0 22px; font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559;">{{ summary }}</p>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px;">
+              <input onChange="{{ setName }}" placeholder="Full name" style="padding:15px 16px; font-family:Archivo, sans-serif; font-size:15px; background:#F7F4EC; border:1px solid #C9C1B0; color:#1B1A17;" />
+              <input onChange="{{ setPhone }}" placeholder="Phone" style="padding:15px 16px; font-family:Archivo, sans-serif; font-size:15px; background:#F7F4EC; border:1px solid #C9C1B0; color:#1B1A17;" />
+            </div>
+            <input onChange="{{ setEmail }}" placeholder="Email (optional)" style="width:100%; margin-top:14px; padding:15px 16px; font-family:Archivo, sans-serif; font-size:15px; background:#F7F4EC; border:1px solid #C9C1B0; color:#1B1A17;" />
+            <textarea onChange="{{ setNote }}" placeholder="Anything you would like us to know before the appointment (optional)" rows="3" style="width:100%; margin-top:14px; padding:15px 16px; font-family:Archivo, sans-serif; font-size:15px; background:#F7F4EC; border:1px solid #C9C1B0; color:#1B1A17; resize:vertical;"></textarea>
+            <button onClick="{{ toggleConsent }}" style="display:grid; grid-template-columns:24px 1fr; gap:12px; align-items:start; text-align:left; margin-top:20px; padding:0; background:none; border:none; cursor:pointer; font-family:Archivo, sans-serif;">
+              <span style="width:22px; height:22px; border:1px solid #1B1A17; display:flex; align-items:center; justify-content:center; font-size:14px; line-height:1;">{{ consentMark }}</span>
+              <span style="font-size:14px; line-height:1.6; color:#3A362E;">I understand this is a request for an assessment, that no treatment is provided without a consultation, and that the clinic may decline to treat where it is not clinically appropriate.</span>
+            </button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:44px 30px 40px;">
+            <div style="font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#12726A;">Request received</div>
+            <h3 style="font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:38px; line-height:1.08; margin:14px 0 0; max-width:24ch;">Thank you. We will call to confirm a time.</h3>
+            <p style="margin:18px 0 0; font-size:16px; line-height:1.7; color:#3A362E; max-width:52ch;">Reception answers requests during clinic hours, Monday to Friday 9 to 5 and Saturday 10 to 3. If your enquiry is urgent, call <a href="tel:0407194519" style="color:#8E5A22; border-bottom:1px solid #8E5A22;">0407 194 519</a>.</p>
+            <p style="margin:14px 0 0; font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559;">{{ summary }}</p>
+            <button onClick="{{ closeModal }}" style="margin-top:30px; background:#1B1A17; color:#EFEAE0; border:none; padding:17px 30px; font-family:Archivo, sans-serif; font-size:15.5px; font-weight:600; cursor:pointer; transition:background-color .3s ease;" style-hover="background-color:#8E5A22;">Close</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ notDone }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; padding:24px 30px 28px; margin-top:20px; border-top:1px solid #C9C1B0;">
+            <sc-if value="{{ showBack }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ goBack }}" style="background:none; border:1px solid #1B1A17; color:#1B1A17; padding:15px 24px; font-family:Archivo, sans-serif; font-size:15px; font-weight:600; cursor:pointer; transition:background-color .25s ease;" style-hover="background-color:#E4DCCB;">Back</button>
+            </sc-if>
+            <div style="font-family:Archivo, Helvetica, sans-serif; font-size:13px; line-height:1.7; letter-spacing:0; text-transform:none; color:#6B6559; flex:1;">No treatment is booked at this step</div>
+            <sc-if value="{{ isStep3 }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ doSubmit }}" style="background:#1B1A17; color:#EFEAE0; border:none; padding:15px 30px; font-family:Archivo, sans-serif; font-size:15px; font-weight:600; cursor:pointer; transition:background-color .3s ease, opacity .25s ease; opacity:{{ submitOpacity }}; pointer-events:{{ submitEvents }};" style-hover="background-color:#8E5A22;">Send request</button>
+            </sc-if>
+            <sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ goNext }}" style="background:#1B1A17; color:#EFEAE0; border:none; padding:15px 30px; font-family:Archivo, sans-serif; font-size:15px; font-weight:600; cursor:pointer; transition:background-color .3s ease, opacity .25s ease; opacity:{{ nextOpacity }}; pointer-events:{{ nextEvents }};" style-hover="background-color:#8E5A22;">Continue</button>
+            </sc-if>
+            <sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+              <button onClick="{{ goNext }}" style="background:#1B1A17; color:#EFEAE0; border:none; padding:15px 30px; font-family:Archivo, sans-serif; font-size:15px; font-weight:600; cursor:pointer; transition:background-color .3s ease, opacity .25s ease; opacity:{{ nextOpacity }}; pointer-events:{{ nextEvents }};" style-hover="background-color:#8E5A22;">Continue</button>
+            </sc-if>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showSkinSection&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = { open:false, step:1, concern:'', clinic:'', time:'', name:'', phone:'', email:'', note:'', consent:false, done:false };
+
+  open(concern) {
+    this.setState({ open:true, step:1, done:false, concern:concern || this.state.concern });
+  }
+  close() { this.setState({ open:false }); }
+  next() { this.setState(s => ({ step: Math.min(3, s.step + 1) })); }
+  back() { this.setState(s => ({ step: Math.max(1, s.step - 1) })); }
+  submit() { this.setState({ done:true }); }
+
+  concerns() {
+    return [
+      ['c1','Lines that appear when my face moves'],
+      ['c2','Change in facial volume or contour'],
+      ['c3','Pigmentation, texture or scarring'],
+      ['c4','Skin laxity and facial support'],
+      ['c5','A spot or mole I want looked at'],
+      ['c6','I am not sure yet']
+    ];
+  }
+  clinics() {
+    return [['hope','Hope Island'],['bundall','Bundall'],['paddington','Paddington'],['maroochydore','Maroochydore'],['ipswich','Ipswich']];
+  }
+  times() {
+    return [['wm','Weekday morning'],['wa','Weekday afternoon'],['sat','Saturday']];
+  }
+  optStyles(list, selectedLabel) {
+    const out = {};
+    list.forEach(([k, label]) => {
+      const on = selectedLabel === label;
+      out[k] = { bg: on ? '#1B1A17' : '#F7F4EC', fg: on ? '#EFEAE0' : '#1B1A17', bd: on ? '#1B1A17' : '#C9C1B0' };
+    });
+    return out;
+  }
+  pickers(list, field) {
+    const out = {};
+    list.forEach(([k, label]) => { out[k] = () => this.setState({ [field]: label }); });
+    return out;
+  }
+
+  componentDidMount() { this.initReveals(); this.initParallax(); }
+  componentDidUpdate() { this.initReveals(); }
+  componentWillUnmount() {
+    clearTimeout(this._fallback);
+    if (this._io) this._io.disconnect();
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onScroll) window.removeEventListener('resize', this._onScroll);
+  }
+  initParallax() {
+    if (this._onScroll) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let queued = false;
+    const apply = () => {
+      queued = false;
+      const vh = window.innerHeight || 1;
+      document.querySelectorAll('[data-parallax]').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) return;
+        const factor = parseFloat(el.dataset.parallax) || 0.05;
+        const offset = (r.top + r.height / 2 - vh / 2) * factor;
+        el.style.translate = '0 ' + Math.max(-26, Math.min(26, offset)).toFixed(1) + 'px';
+      });
+    };
+    this._onScroll = () => { if (!queued) { queued = true; requestAnimationFrame(apply); } };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    apply();
+  }
+  initReveals() {
+    const show = el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      if (el.dataset.reveal === 'clip') el.style.clipPath = 'inset(0 0 0 0)';
+      el.dataset.revealed = '1';
+    };
+    const all = Array.from(document.querySelectorAll('[data-reveal]'));
+    all.filter(n => n.dataset.revealed).forEach(show);
+    const nodes = all.filter(n => !n.dataset.revealed);
+    if (!nodes.length) return;
+    if (!('IntersectionObserver' in window)) { nodes.forEach(show); return; }
+
+    // A masked line is translated outside its overflow:hidden parent, so it never
+    // intersects anything — watch the clipping parent and reveal the child.
+    const watchTarget = n => {
+      const p = n.parentElement;
+      if (!p) return n;
+      const ov = getComputedStyle(p).overflow;
+      return (ov === 'hidden' || ov === 'clip') ? p : n;
+    };
+    if (!this._targets) this._targets = new Map();
+    if (!this._io) {
+      this._io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const list = this._targets.get(e.target) || [];
+          list.forEach(n => setTimeout(() => show(n), parseInt(n.dataset.revealDelay || '0', 10)));
+          this._targets.delete(e.target);
+          obs.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+    }
+    nodes.forEach(n => {
+      const t = watchTarget(n);
+      const list = this._targets.get(t) || [];
+      list.push(n);
+      this._targets.set(t, list);
+      this._io.observe(t);
+    });
+
+    // safety net for anything already on screen, so off-screen items still animate on scroll
+    clearTimeout(this._fallback);
+    this._fallback = setTimeout(() => {
+      const vh = window.innerHeight || 1;
+      nodes.forEach(n => {
+        if (n.dataset.revealed) return;
+        const r = watchTarget(n).getBoundingClientRect();
+        if (r.top < vh && r.bottom > 0) show(n);
+      });
+    }, 1600);
+  }
+  renderVals() {
+    const s = this.state;
+    const canNext = s.step === 1 ? !!s.concern : s.step === 2 ? (!!s.clinic && !!s.time) : true;
+    const canSubmit = !!s.name.trim() && !!s.phone.trim() && s.consent;
+    const openers = {};
+    this.concerns().forEach(([k, label]) => { openers[k] = e => { if (e && e.preventDefault) e.preventDefault(); this.open(label); }; });
+    return {
+      showTopBar: this.props.showTopBar ?? true,
+      showSkinSection: this.props.showSkinSection ?? true,
+      modalOpen: s.open,
+      isStep1: s.open && !s.done && s.step === 1,
+      isStep2: s.open && !s.done && s.step === 2,
+      isStep3: s.open && !s.done && s.step === 3,
+      isDone: s.open && s.done,
+      notDone: s.open && !s.done,
+      showBack: s.step > 1,
+      stepLabel: 'Step ' + s.step + ' of 3',
+      progress: (s.step / 3 * 100) + '%',
+      nextOpacity: canNext ? '1' : '0.35',
+      nextEvents: canNext ? 'auto' : 'none',
+      submitOpacity: canSubmit ? '1' : '0.35',
+      submitEvents: canSubmit ? 'auto' : 'none',
+      consentMark: s.consent ? '✓' : '',
+      summary: [s.concern, s.clinic, s.time].filter(Boolean).join(' · '),
+      openModal: e => { if (e && e.preventDefault) e.preventDefault(); this.open(); },
+      openWith: openers,
+      closeModal: () => this.close(),
+      stop: e => e.stopPropagation(),
+      goNext: () => this.next(),
+      goBack: () => this.back(),
+      doSubmit: e => { if (e && e.preventDefault) e.preventDefault(); this.submit(); },
+      c: this.optStyles(this.concerns(), s.concern),
+      cl: this.optStyles(this.clinics(), s.clinic),
+      t: this.optStyles(this.times(), s.time),
+      pickC: this.pickers(this.concerns(), 'concern'),
+      pickCl: this.pickers(this.clinics(), 'clinic'),
+      pickT: this.pickers(this.times(), 'time'),
+      setName: e => this.setState({ name: e.target.value }),
+      setPhone: e => this.setState({ phone: e.target.value }),
+      setEmail: e => this.setState({ email: e.target.value }),
+      setNote: e => this.setState({ note: e.target.value }),
+      toggleConsent: () => this.setState(st => ({ consent: !st.consent }))
+    };
+  }
+}
+</script>
+</body>
+</html>
